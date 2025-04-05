@@ -3,6 +3,9 @@ extends AnimatedSprite2D
 @onready var ray_cast_left: RayCast2D = $RayCastLeft
 @onready var ray_cast_right: RayCast2D = $RayCastRight
 @onready var slime: AnimatedSprite2D = $"."
+@onready var area_2d: Area2D = $Area2D
+@onready var timer: Timer = $Area2D/Timer
+@onready var killzone_collision_shape: CollisionShape2D = $Killzone/CollisionShape2D
 
 const SPEED = 60
 
@@ -19,4 +22,11 @@ func _process(delta: float) -> void:
 	
 	position.x += direction * SPEED * delta
 
-	
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	print("Killed slime!")
+	killzone_collision_shape.queue_free()
+
+	slime.play("die")
+	await get_tree().create_timer(0.5).timeout
+	queue_free()

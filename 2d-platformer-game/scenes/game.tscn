@@ -298,11 +298,18 @@ _data = {
 unique_name_in_owner = true
 script = ExtResource("1_u5sy4")
 
-[node name="ScoreLabel" type="Label" parent="GameManager"]
-offset_left = 800.0
-offset_top = -155.0
-offset_right = 852.0
-offset_bottom = -132.0
+[node name="CanvasLayer" type="CanvasLayer" parent="GameManager"]
+layer = 0
+
+[node name="ScoreLabel" type="Label" parent="GameManager/CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.05
+anchor_right = 0.061
+anchor_bottom = 0.5
+offset_right = 233.0
+offset_bottom = 23.0
+size_flags_horizontal = 0
 theme_override_fonts/font = ExtResource("8_gee14")
 theme_override_font_sizes/font_size = 16
 text = "Score: 0"

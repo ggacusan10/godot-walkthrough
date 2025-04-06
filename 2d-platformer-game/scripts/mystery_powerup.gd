@@ -1,13 +1,18 @@
 extends Node2D
 
+@onready var game_manager: Node = %GameManager
+@onready var fruit: Node2D = $Fruit
+@onready var power_up_hitbox: Area2D = $PowerUpHitbox
+
 func _ready():
 	var powerUpHitbox = $PowerUpHitbox
 	powerUpHitbox.power_up_hitbox_hit.connect(_on_power_up_hitbox_hit)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
+	fruit.grabbed_fruit.connect(_on_grabbed_fruit)
 
 func _on_power_up_hitbox_hit() -> void:
-	print("hit!")
+	print("[mystery_powerup.gd] Received signal that it was hit")
+	fruit.get_fruit()
+
+func _on_grabbed_fruit() -> void:
+	print("[mystery_powerup.gd] Grabbed fruit")
+	game_manager.add_point()

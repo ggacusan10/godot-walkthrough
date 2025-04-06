@@ -65,9 +65,7 @@ script = ExtResource("1_sl2ul")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_2kcr1")
-animation = &"hurt"
 autoplay = "default"
-frame_progress = 0.165336
 
 [node name="Killzone" parent="." instance=ExtResource("3_anout")]
 collision_layer = 1

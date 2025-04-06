@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://c8227mwunaom0"]
+[gd_scene load_steps=6 format=3 uid="uid://c8227mwunaom0"]
 
 [ext_resource type="Script" uid="uid://bksqp8y6c45yo" path="res://scripts/mystery_powerup.gd" id="1_ji26w"]
 [ext_resource type="Texture2D" uid="uid://bjhk3od35qho1" path="res://assets/sprites/world_tileset.png" id="1_tg64g"]
 [ext_resource type="PackedScene" uid="uid://bccj8aiwcfrxg" path="res://scenes/power_up_hitbox.tscn" id="2_3cuhs"]
+[ext_resource type="PackedScene" uid="uid://qc7t7l2b20el" path="res://scenes/fruit.tscn" id="4_pxval"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ji26w"]
 size = Vector2(14, 14)
@@ -26,3 +27,6 @@ shape = SubResource("RectangleShape2D_ji26w")
 [node name="PowerUpHitbox" parent="." instance=ExtResource("2_3cuhs")]
 position = Vector2(0, 2)
 collision_mask = 2
+
+[node name="Fruit" parent="." instance=ExtResource("4_pxval")]
+position = Vector2(0, -22)

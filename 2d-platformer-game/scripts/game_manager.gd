@@ -9,3 +9,5 @@ func add_point():
 	print("Current score: ", score)
 	score_label.text = "Score: " + str(score)
 	
+func _on_grabbed_fruit() -> void:
+	add_point()

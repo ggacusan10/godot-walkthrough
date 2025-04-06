@@ -15,4 +15,4 @@ func _on_power_up_hitbox_hit() -> void:
 
 func _on_grabbed_fruit() -> void:
 	print("[mystery_powerup.gd] Grabbed fruit")
-	game_manager.add_point()
+	game_manager.add_fruit_score()

@@ -1,8 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://b2208g3q7c85i"]
+[gd_scene load_steps=24 format=3 uid="uid://b2208g3q7c85i"]
 
 [ext_resource type="Script" uid="uid://p36c0rg46ogf" path="res://scripts/game_manager.gd" id="1_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://cbcqas7tcsdad" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://dy4e7l2g0rnpf" path="res://scripts/game_manager_v2.gd" id="1_vtaks"]
 [ext_resource type="Texture2D" uid="uid://bjhk3od35qho1" path="res://assets/sprites/world_tileset.png" id="2_yqjtg"]
+[ext_resource type="Script" uid="uid://c1ys10fxc04ii" path="res://scripts/lives_label.gd" id="3_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://beox8pw5qnvxw" path="res://scenes/platform.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://dae15k27nto7t" path="res://scenes/coin.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://c6rmv3rjpljji" path="res://scenes/killzone.tscn" id="5_iywne"]
@@ -293,6 +295,23 @@ _data = {
 }
 
 [node name="Game" type="Node2D"]
+
+[node name="GameManagerV2" type="Node" parent="."]
+script = ExtResource("1_vtaks")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="GameManagerV2"]
+layer = 0
+
+[node name="LivesLabel" type="Label" parent="GameManagerV2/CanvasLayer"]
+offset_left = 22.0
+offset_top = 132.0
+offset_right = 79.0
+offset_bottom = 155.0
+theme_override_fonts/font = ExtResource("8_gee14")
+theme_override_font_sizes/font_size = 16
+text = "Lives: 3"
+script = ExtResource("3_kvpfn")
+metadata/_edit_use_anchors_ = true
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true

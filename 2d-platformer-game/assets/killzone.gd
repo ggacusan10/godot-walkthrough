@@ -6,10 +6,11 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	print("You died!")
-#	# Engine goes half speed once we die
+	# Engine goes half speed once we die
 	Engine.time_scale = 0.5
 	body.get_node("CollisionShape2D").queue_free()
 	killed_sound.playing = true
+	GameManagerV2.decrement_life()	
 	timer.start()
 
 

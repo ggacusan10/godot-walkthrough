@@ -19,15 +19,15 @@ var lives: int = MAX_LIVES:
 	set(new_lives):
 		if new_lives > 0:
 			lives = new_lives
-			print("[GameManagerV2] setting new life: ", lives)
+			print("[GameManager] setting new life: ", lives)
 			emit_signal("lives_changed", lives)
 		else:
-			print("[GameManagerV2] Game Over!")
+			print("[GameManager] Game Over!")
 	get:
 		return lives
 
 func decrement_life() -> void:
-	print("[GameManagerV2] decrement_life")
+	print("[GameManager] decrement_life")
 	lives -= 1
 
 func add_collected_coin(coin_id: String) -> void:

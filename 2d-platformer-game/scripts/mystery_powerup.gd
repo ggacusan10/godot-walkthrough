@@ -14,4 +14,4 @@ func _on_power_up_hitbox_hit() -> void:
 
 func _on_grabbed_fruit() -> void:
 	print("[mystery_powerup.gd] Grabbed fruit")
-	GameManagerV2.add_fruit()
+	GameManager.add_fruit()

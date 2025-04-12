@@ -14,7 +14,7 @@ func _ready():
 	orange.visible = false
 	fruits = [apple, orange]
 	
-	# initialize the fruit to be in a different collision mak
+	# initialize the fruit to be in a different collision mask
 	# so that the player cannot grab it right away.
 	# The player must hit the powerup first for it to be grabbed.
 	area_2d.collision_mask = 1

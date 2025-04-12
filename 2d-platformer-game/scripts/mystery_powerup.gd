@@ -1,6 +1,5 @@
 extends Node2D
 
-@onready var game_manager: Node = %GameManager
 @onready var fruit: Node2D = $Fruit
 @onready var power_up_hitbox: Area2D = $PowerUpHitbox
 
@@ -15,4 +14,4 @@ func _on_power_up_hitbox_hit() -> void:
 
 func _on_grabbed_fruit() -> void:
 	print("[mystery_powerup.gd] Grabbed fruit")
-	game_manager.add_fruit_score()
+	GameManagerV2.add_fruit()

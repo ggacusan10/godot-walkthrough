@@ -1,10 +1,13 @@
 extends Area2D
 
-@onready var game_manager: Node = %GameManager
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
+var coin_id: String
+
+func _ready() -> void:
+	if GameManagerV2.collected_coins.has(self.name):
+		queue_free()
+
 func _on_body_entered(body: Node2D) -> void:
-	print("+1 coin")
-	print("game manager: ", game_manager)
-	game_manager.add_point()
+	GameManagerV2.add_collected_coin(self.name)
 	animation_player.play("pickup")

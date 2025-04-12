@@ -10,7 +10,7 @@ func _on_body_entered(body: Node2D) -> void:
 	power_up_hitbox_hit.emit()
 
 	# once it's hit, remove the hitbox so that
-	# the player get unlimited powerups from the
+	# the player cannot get unlimited powerups from the
 	# same hitbox
 	await get_tree().create_timer(0.5).timeout
 	queue_free()

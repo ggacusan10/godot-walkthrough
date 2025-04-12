@@ -1,13 +1,14 @@
-[gd_scene load_steps=24 format=3 uid="uid://b2208g3q7c85i"]
+[gd_scene load_steps=25 format=3 uid="uid://b2208g3q7c85i"]
 
-[ext_resource type="Script" uid="uid://p36c0rg46ogf" path="res://scripts/game_manager.gd" id="1_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://cbcqas7tcsdad" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://dy4e7l2g0rnpf" path="res://scripts/game_manager_v2.gd" id="1_vtaks"]
 [ext_resource type="Texture2D" uid="uid://bjhk3od35qho1" path="res://assets/sprites/world_tileset.png" id="2_yqjtg"]
+[ext_resource type="Script" uid="uid://c055fs5k5fk28" path="res://scripts/coins_label.gd" id="3_dinhu"]
 [ext_resource type="Script" uid="uid://c1ys10fxc04ii" path="res://scripts/lives_label.gd" id="3_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://beox8pw5qnvxw" path="res://scenes/platform.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://dae15k27nto7t" path="res://scenes/coin.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://c6rmv3rjpljji" path="res://scenes/killzone.tscn" id="5_iywne"]
+[ext_resource type="Script" uid="uid://cl74t176bxjer" path="res://scripts/fruits_label.gd" id="5_kvuet"]
 [ext_resource type="PackedScene" uid="uid://vg0ahnx515p7" path="res://scenes/slime.tscn" id="8_0tnpc"]
 [ext_resource type="FontFile" uid="uid://msqy0hwvsuth" path="res://assets/fonts/PixelOperator8.ttf" id="8_gee14"]
 [ext_resource type="PackedScene" uid="uid://c8227mwunaom0" path="res://scenes/mystery_powerup.tscn" id="9_0tnpc"]
@@ -297,43 +298,50 @@ _data = {
 [node name="Game" type="Node2D"]
 
 [node name="GameManagerV2" type="Node" parent="."]
+unique_name_in_owner = true
 script = ExtResource("1_vtaks")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="GameManagerV2"]
 layer = 0
 
-[node name="LivesLabel" type="Label" parent="GameManagerV2/CanvasLayer"]
-offset_left = 22.0
-offset_top = 132.0
-offset_right = 79.0
-offset_bottom = 155.0
+[node name="VBoxContainer" type="VBoxContainer" parent="GameManagerV2/CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.041
+anchor_top = 0.077
+anchor_right = 0.075
+anchor_bottom = 0.119
+offset_left = -58.0
+offset_top = -46.8
+offset_right = 40.0
+offset_bottom = 2.8
+size_flags_horizontal = 0
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="CoinsLabel" type="Label" parent="GameManagerV2/CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_fonts/font = ExtResource("8_gee14")
+theme_override_font_sizes/font_size = 16
+text = "Coins: 0"
+script = ExtResource("3_dinhu")
+
+[node name="FruitsLabel" type="Label" parent="GameManagerV2/CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_fonts/font = ExtResource("8_gee14")
+theme_override_font_sizes/font_size = 16
+text = "Fruits: 0"
+script = ExtResource("5_kvuet")
+
+[node name="LivesLabel" type="Label" parent="GameManagerV2/CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("8_gee14")
 theme_override_font_sizes/font_size = 16
 text = "Lives: 3"
 script = ExtResource("3_kvpfn")
 metadata/_edit_use_anchors_ = true
-
-[node name="GameManager" type="Node" parent="."]
-unique_name_in_owner = true
-script = ExtResource("1_u5sy4")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="GameManager"]
-layer = 0
-
-[node name="ScoreLabel" type="Label" parent="GameManager/CanvasLayer"]
-anchors_preset = -1
-anchor_left = 0.01
-anchor_top = 0.05
-anchor_right = 0.061
-anchor_bottom = 0.5
-offset_right = 233.0
-offset_bottom = 23.0
-size_flags_horizontal = 0
-theme_override_fonts/font = ExtResource("8_gee14")
-theme_override_font_sizes/font_size = 16
-text = "Coins: 0
-
-Fruits: 0"
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_lbhrr")
@@ -345,7 +353,7 @@ layer_1/tile_data = PackedInt32Array(65535, 0, 0, 0, 0, 0, 65533, 0, 0, 65534, 0
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 z_index = 5
-position = Vector2(1327, 10)
+position = Vector2(583, -57)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(4, 4)
@@ -446,9 +454,6 @@ theme_override_colors/font_color = Color(0.00784314, 0.14902, 0.34902, 1)
 theme_override_fonts/font = ExtResource("8_gee14")
 theme_override_font_sizes/font_size = 8
 text = "Don't fall!"
-
-[node name="Coin" parent="." instance=ExtResource("4_lbhrr")]
-position = Vector2(968, 7)
 
 [node name="MysteryPowerups" type="Node" parent="."]
 

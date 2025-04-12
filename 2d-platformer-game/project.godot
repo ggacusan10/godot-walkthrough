@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="2d-platformer-game"
-run/main_scene="uid://din5nv8a0h6k"
+run/main_scene="uid://b2208g3q7c85i"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Music="*res://scenes/music.tscn"
+GameManager="*res://scripts/game_manager.gd"
 
 [display]
 

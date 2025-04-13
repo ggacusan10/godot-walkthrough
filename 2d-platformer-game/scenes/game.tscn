@@ -318,7 +318,7 @@ script = ExtResource("1_vtaks")
 [node name="CanvasLayer" type="CanvasLayer" parent="GameManager"]
 layer = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="GameManager/CanvasLayer"]
+[node name="Scoreboard" type="VBoxContainer" parent="GameManager/CanvasLayer"]
 anchors_preset = -1
 anchor_left = 0.041
 anchor_top = 0.077
@@ -333,7 +333,7 @@ size_flags_vertical = 3
 script = ExtResource("3_trtic")
 metadata/_edit_use_anchors_ = true
 
-[node name="CoinsLabel" type="Label" parent="GameManager/CanvasLayer/VBoxContainer"]
+[node name="CoinsLabel" type="Label" parent="GameManager/CanvasLayer/Scoreboard"]
 layout_mode = 2
 size_flags_vertical = 2
 theme_override_fonts/font = ExtResource("8_gee14")
@@ -341,7 +341,7 @@ theme_override_font_sizes/font_size = 16
 text = "Coins: 0"
 script = ExtResource("3_dinhu")
 
-[node name="FruitsLabel" type="Label" parent="GameManager/CanvasLayer/VBoxContainer"]
+[node name="FruitsLabel" type="Label" parent="GameManager/CanvasLayer/Scoreboard"]
 layout_mode = 2
 size_flags_vertical = 2
 theme_override_fonts/font = ExtResource("8_gee14")
@@ -349,7 +349,7 @@ theme_override_font_sizes/font_size = 16
 text = "Fruits: 0"
 script = ExtResource("5_kvuet")
 
-[node name="LivesLabel" type="Label" parent="GameManager/CanvasLayer/VBoxContainer"]
+[node name="LivesLabel" type="Label" parent="GameManager/CanvasLayer/Scoreboard"]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("8_gee14")

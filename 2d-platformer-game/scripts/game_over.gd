@@ -11,9 +11,9 @@ func _ready() -> void:
 func _on_game_over() -> void:
 	print("[GameOver] received game over signal")
 	self.visible = true
-	coins_label.text = "Coins collected: " + str(GameManager.coins)
-	fruits_label.text = "Fruits collected: " + str(GameManager.fruits)
-	slimes_label.text = "Slimes killed: " + str(GameManager.slimes)
+	coins_label.text = "Coins collected: " + str(GameManager.game_state.coins)
+	fruits_label.text = "Fruits collected: " + str(GameManager.game_state.fruits)
+	slimes_label.text = "Slimes killed: " + str(GameManager.game_state.slimes)
 	
 
 func _on_button_pressed() -> void:

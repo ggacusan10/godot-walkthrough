@@ -5,7 +5,7 @@ extends Area2D
 var coin_id: String
 
 func _ready() -> void:
-	if GameManager.collected_coins.has(self.name):
+	if GameManager.game_state.collected_coins.has(self.name):
 		queue_free()
 
 func _on_body_entered(body: Node2D) -> void:

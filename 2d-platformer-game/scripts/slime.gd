@@ -14,7 +14,7 @@ var slime_id: String
 func _ready() -> void:
 	slime_id = self.name
 	# don't show the slime if it has been killed before
-	if GameManager.killed_slimes.has(slime_id):
+	if GameManager.game_state.killed_slimes.has(slime_id):
 		queue_free()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.

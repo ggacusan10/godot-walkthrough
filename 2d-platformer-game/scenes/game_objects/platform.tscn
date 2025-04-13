@@ -1,16 +1,33 @@
-[gd_scene load_steps=3 format=3 uid="uid://beox8pw5qnvxw"]
+[gd_scene load_steps=4 format=3 uid="uid://beox8pw5qnvxw"]
 
 [ext_resource type="Texture2D" uid="uid://cidwgu66lm3lm" path="res://assets/sprites/platforms.png" id="1_ba0x2"]
+[ext_resource type="Script" uid="uid://dls6ynurh7a6p" path="res://scripts/nodes/game_objects/platform.gd" id="1_gpo41"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nlgqw"]
 size = Vector2(32, 10)
 
 [node name="Platform" type="AnimatableBody2D"]
+script = ExtResource("1_gpo41")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="GrassPlatform" type="Sprite2D" parent="."]
 texture = ExtResource("1_ba0x2")
 region_enabled = true
 region_rect = Rect2(17, 0, 31, 9)
+
+[node name="SandPlatform" type="Sprite2D" parent="."]
+texture = ExtResource("1_ba0x2")
+region_enabled = true
+region_rect = Rect2(17, 16, 31, 9)
+
+[node name="RockPlatform" type="Sprite2D" parent="."]
+texture = ExtResource("1_ba0x2")
+region_enabled = true
+region_rect = Rect2(16, 32, 31, 9)
+
+[node name="IcePlatform" type="Sprite2D" parent="."]
+texture = ExtResource("1_ba0x2")
+region_enabled = true
+region_rect = Rect2(17, 48, 31, 9)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_nlgqw")

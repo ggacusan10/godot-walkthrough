@@ -14,11 +14,29 @@ script = ExtResource("1_ji26w")
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
 collision_mask = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D"]
+[node name="GrassMysteryPowerUp" type="Sprite2D" parent="AnimatableBody2D"]
 position = Vector2(0, -8)
 texture = ExtResource("1_tg64g")
 region_enabled = true
-region_rect = Rect2(0, 32, 16, 17)
+region_rect = Rect2(0, 32, 16, 16)
+
+[node name="SandMysteryPowerUp" type="Sprite2D" parent="AnimatableBody2D"]
+position = Vector2(0, -8)
+texture = ExtResource("1_tg64g")
+region_enabled = true
+region_rect = Rect2(48, 32, 16, 16)
+
+[node name="RockMysteryPowerUp" type="Sprite2D" parent="AnimatableBody2D"]
+position = Vector2(0, -8)
+texture = ExtResource("1_tg64g")
+region_enabled = true
+region_rect = Rect2(64, 32, 16, 16)
+
+[node name="IceMysteryPowerUp" type="Sprite2D" parent="AnimatableBody2D"]
+position = Vector2(0, -8)
+texture = ExtResource("1_tg64g")
+region_enabled = true
+region_rect = Rect2(112, 32, 16, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
 position = Vector2(0, -9)

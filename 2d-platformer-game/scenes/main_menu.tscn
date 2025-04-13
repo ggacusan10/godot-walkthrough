@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://din5nv8a0h6k"]
 
-[ext_resource type="Script" uid="uid://e13rt8qt2lmf" path="res://scripts/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Script" uid="uid://e13rt8qt2lmf" path="res://scripts/nodes/ui/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://bog65lx6ouk12" path="res://assets/imgs/godot_background_main_menu.png" id="1_ekxnf"]
 [ext_resource type="FontFile" uid="uid://msqy0hwvsuth" path="res://assets/fonts/PixelOperator8.ttf" id="2_bqqt6"]
 

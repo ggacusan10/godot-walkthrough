@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://qc7t7l2b20el"]
 
-[ext_resource type="Script" uid="uid://b5cbkv8jimo3n" path="res://scripts/fruit.gd" id="1_yvtr8"]
+[ext_resource type="Script" uid="uid://b5cbkv8jimo3n" path="res://scripts/nodes/game_objects/fruit.gd" id="1_yvtr8"]
 [ext_resource type="Texture2D" uid="uid://cm4luxip06de2" path="res://assets/sprites/fruit.png" id="2_t2alg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yvtr8"]

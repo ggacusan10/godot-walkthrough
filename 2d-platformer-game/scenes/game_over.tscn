@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://c4xbf8txokgvr"]
 
-[ext_resource type="Script" uid="uid://cfbhfg7f0v546" path="res://scripts/game_over.gd" id="1_wqhvx"]
+[ext_resource type="Script" uid="uid://cfbhfg7f0v546" path="res://scripts/nodes/ui/game_over.gd" id="1_wqhvx"]
 [ext_resource type="FontFile" uid="uid://msqy0hwvsuth" path="res://assets/fonts/PixelOperator8.ttf" id="1_xeevv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqhvx"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bccj8aiwcfrxg"]
 
-[ext_resource type="Script" uid="uid://imlrrckrjebu" path="res://scripts/power_up.gd" id="1_768ry"]
+[ext_resource type="Script" uid="uid://imlrrckrjebu" path="res://scripts/nodes/game_objects/power_up.gd" id="1_768ry"]
 [ext_resource type="AudioStream" uid="uid://d33nksm4imxsh" path="res://assets/sounds/power_up.wav" id="2_4vdha"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4vc2"]

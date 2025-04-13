@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c4xbf8txokgvr"]
+[gd_scene load_steps=8 format=3 uid="uid://c4xbf8txokgvr"]
 
 [ext_resource type="Script" uid="uid://cfbhfg7f0v546" path="res://scripts/game_over.gd" id="1_wqhvx"]
 [ext_resource type="FontFile" uid="uid://msqy0hwvsuth" path="res://assets/fonts/PixelOperator8.ttf" id="1_xeevv"]
@@ -12,6 +12,25 @@ corner_radius_top_left = 32
 corner_radius_top_right = 32
 corner_radius_bottom_right = 32
 corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_racf3"]
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7m3ot"]
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbwuq"]
+bg_color = Color(0.361007, 0.686927, 0.386294, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -61,37 +80,77 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_xeevv")
 
-[node name="Label" type="Label" parent="Panel/Control/Panel"]
+[node name="GameOutcomeLabel" type="Label" parent="Panel/Control/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.268
+anchor_right = 0.5
+anchor_bottom = 0.268
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = -66.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_xeevv")
+theme_override_font_sizes/font_size = 48
+text = "Game Over!"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Control/Panel"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+offset_left = -148.0
+offset_top = -74.0
+offset_right = 148.0
+offset_bottom = 74.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="CoinsLabel" type="Label" parent="Panel/Control/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("1_xeevv")
-theme_override_font_sizes/font_size = 48
-text = "Game Over!"
+theme_override_font_sizes/font_size = 24
+text = "Coins collected: 0"
+
+[node name="FruitsLabel" type="Label" parent="Panel/Control/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_xeevv")
+theme_override_font_sizes/font_size = 24
+text = "Fruits collected: 0"
+
+[node name="SlimesLabel" type="Label" parent="Panel/Control/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_xeevv")
+theme_override_font_sizes/font_size = 24
+text = "Slimes killed: 0"
 
 [node name="Button" type="Button" parent="Panel/Control/Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.962
+anchor_top = 0.934
 anchor_right = 0.5
-anchor_bottom = 0.962
-offset_left = -95.0
-offset_top = -64.0
-offset_right = 95.0
+anchor_bottom = 0.934
+offset_left = -128.0
+offset_top = -84.0
+offset_right = 128.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("1_xeevv")
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = SubResource("StyleBoxFlat_racf3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7m3ot")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tbwuq")
 text = "Start Over"
 
 [connection signal="pressed" from="Panel/Control/Panel/Button" to="." method="_on_button_pressed"]

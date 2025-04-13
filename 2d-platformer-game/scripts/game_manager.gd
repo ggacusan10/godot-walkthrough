@@ -16,6 +16,7 @@ var killed_slimes = {}
 # Keeps track of number of `item` collected
 var coins = 0
 var fruits = 0
+var slimes = 0
 
 var is_game_over = false
 
@@ -50,6 +51,7 @@ func add_fruit() -> void:
 
 func add_killed_slime(slime_id: String) -> void:
 	killed_slimes[slime_id] = true
+	slimes += 1
 
 func reload() -> void:
 	lives = MAX_LIVES

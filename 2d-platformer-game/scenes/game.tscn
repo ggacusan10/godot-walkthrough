@@ -3,11 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://c4xbf8txokgvr" path="res://scenes/game_over.tscn" id="1_kvuet"]
 [ext_resource type="PackedScene" uid="uid://cbcqas7tcsdad" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://dy4e7l2g0rnpf" path="res://scripts/game_manager.gd" id="1_vtaks"]
-[ext_resource type="Script" uid="uid://cfbhfg7f0v546" path="res://scripts/game_over.gd" id="2_trtic"]
 [ext_resource type="Texture2D" uid="uid://bjhk3od35qho1" path="res://assets/sprites/world_tileset.png" id="2_yqjtg"]
 [ext_resource type="Script" uid="uid://c055fs5k5fk28" path="res://scripts/coins_label.gd" id="3_dinhu"]
 [ext_resource type="Script" uid="uid://c1ys10fxc04ii" path="res://scripts/lives_label.gd" id="3_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://beox8pw5qnvxw" path="res://scenes/platform.tscn" id="3_lnu2h"]
+[ext_resource type="Script" uid="uid://ry0vqg4bjayi" path="res://scripts/v_box_container.gd" id="3_trtic"]
 [ext_resource type="PackedScene" uid="uid://dae15k27nto7t" path="res://scenes/coin.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://c6rmv3rjpljji" path="res://scenes/killzone.tscn" id="5_iywne"]
 [ext_resource type="Script" uid="uid://cl74t176bxjer" path="res://scripts/fruits_label.gd" id="5_kvuet"]
@@ -311,14 +311,12 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 size_flags_vertical = 4
-script = ExtResource("2_trtic")
 
 [node name="GameManager" type="Node" parent="."]
-unique_name_in_owner = true
 script = ExtResource("1_vtaks")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="GameManager"]
-layer = 0
+layer = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="GameManager/CanvasLayer"]
 anchors_preset = -1
@@ -332,6 +330,7 @@ offset_right = 40.0
 offset_bottom = 2.8
 size_flags_horizontal = 0
 size_flags_vertical = 3
+script = ExtResource("3_trtic")
 metadata/_edit_use_anchors_ = true
 
 [node name="CoinsLabel" type="Label" parent="GameManager/CanvasLayer/VBoxContainer"]

@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://din5nv8a0h6k"]
 
-[ext_resource type="Script" uid="uid://e13rt8qt2lmf" path="res://scripts/nodes/ui/main_menu.gd" id="1_bqqt6"]
-[ext_resource type="Texture2D" uid="uid://bog65lx6ouk12" path="res://assets/imgs/godot_background_main_menu.png" id="1_ekxnf"]
-[ext_resource type="FontFile" uid="uid://msqy0hwvsuth" path="res://assets/fonts/PixelOperator8.ttf" id="2_bqqt6"]
+[ext_resource type="Script" uid="uid://e13rt8qt2lmf" path="res://scripts/nodes/ui/main_menu.gd" id="1_1g8jr"]
+[ext_resource type="Texture2D" uid="uid://bog65lx6ouk12" path="res://assets/imgs/godot_background_main_menu.png" id="2_m1kxf"]
+[ext_resource type="FontFile" uid="uid://msqy0hwvsuth" path="res://assets/fonts/PixelOperator8.ttf" id="3_x2yvf"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wu84c"]
-texture = ExtResource("1_ekxnf")
+texture = ExtResource("2_m1kxf")
 modulate_color = Color(0.566967, 0.566967, 0.566967, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqqt6"]
@@ -45,7 +45,7 @@ offset_left = 2.0
 offset_right = 2.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_bqqt6")
+script = ExtResource("1_1g8jr")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -74,7 +74,7 @@ theme_override_constants/separation = 5
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_fonts/font = ExtResource("3_x2yvf")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/hover = SubResource("StyleBoxFlat_bqqt6")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_8ln24")
@@ -84,7 +84,7 @@ text = "Start"
 [node name="HowToPlayButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_fonts/font = ExtResource("3_x2yvf")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/hover = SubResource("StyleBoxFlat_bqqt6")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_8ln24")
@@ -95,7 +95,7 @@ text = "How to Play
 [node name="ExitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_fonts/font = ExtResource("3_x2yvf")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/hover = SubResource("StyleBoxFlat_bqqt6")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_8ln24")
@@ -114,7 +114,7 @@ offset_top = -23.0
 offset_right = 293.0
 offset_bottom = 25.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_fonts/font = ExtResource("3_x2yvf")
 theme_override_font_sizes/font_size = 48
 text = "Nomadic Soldier"
 

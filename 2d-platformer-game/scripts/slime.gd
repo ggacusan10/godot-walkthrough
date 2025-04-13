@@ -7,9 +7,16 @@ extends Node2D
 @onready var killed_slime_sound: AudioStreamPlayer2D = $KilledSlimeSound
 @onready var timer: Timer = $AttackZone/Timer
 
-const SPEED = 60
-var direction = 1
+const SPEED: int = 60
+var direction: int = 1
+var slime_id: String
 
+func _ready() -> void:
+	slime_id = self.name
+	# don't show the slime if it has been killed before
+	if GameManager.killed_slimes.has(slime_id):
+		queue_free()
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if ray_cast_right.is_colliding():
@@ -27,6 +34,7 @@ func _on_attack_zone_body_entered(body: Node2D) -> void:
 	killzone.queue_free()
 	animated_sprite_2d.play("hurt")
 	killed_slime_sound.playing = true
+	GameManager.add_killed_slime(slime_id)
 	await get_tree().create_timer(0.5).timeout
 	queue_free()
 	

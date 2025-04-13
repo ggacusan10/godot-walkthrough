@@ -17,4 +17,6 @@ func _on_body_entered(body: Node2D) -> void:
 func _on_timer_timeout() -> void:
 	Engine.time_scale = 1
 	killed_sound.playing = false
-	get_tree().reload_current_scene()
+	
+	if not GameManager.is_game_over:
+		get_tree().reload_current_scene()

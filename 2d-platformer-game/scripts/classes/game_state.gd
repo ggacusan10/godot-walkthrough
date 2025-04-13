@@ -15,5 +15,6 @@ var fruits: int = 0
 var slimes: int = 0
 
 var is_game_over: bool = false
+var did_win: bool = false
 
 var lives: int = MAX_LIVES

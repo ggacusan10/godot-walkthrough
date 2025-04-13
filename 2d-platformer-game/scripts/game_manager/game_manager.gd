@@ -14,15 +14,16 @@ func _ready() -> void:
 	print("[GameManager] ready game_state: ", game_state)
 	if game_state == null:
 		game_state = GameState.new()
-		print("[GameManager] creating new game_state", game_state)
+		print("[GameManager] creating new game_state: ", game_state)
 
 func decrement_life() -> void:
 	print("[GameManager] decrement_life")
 	game_state.lives -= 1
 	
 	if game_state.lives <= 0:
-		emit_signal("game_over_signal")
 		game_state.is_game_over = true
+		game_state.did_win = false
+		emit_signal("game_over_signal")
 	else:
 		emit_signal("lives_changed", game_state.lives)
 

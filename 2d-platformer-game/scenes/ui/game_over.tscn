@@ -6,12 +6,12 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqhvx"]
 bg_color = Color(0.0901961, 0.0901961, 0.0901961, 0.356863)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xeevv"]
-bg_color = Color(0.899121, 0.382279, 0.390118, 1)
-corner_radius_top_left = 32
-corner_radius_top_right = 32
-corner_radius_bottom_right = 32
-corner_radius_bottom_left = 32
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fu4wh"]
+bg_color = Color(0.339911, 0.693591, 0.336959, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_racf3"]
 corner_radius_top_left = 16
@@ -26,7 +26,7 @@ corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbwuq"]
-bg_color = Color(0.361007, 0.686927, 0.386294, 1)
+bg_color = Color(0.339911, 0.693591, 0.336959, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -78,7 +78,7 @@ offset_right = 472.5
 offset_bottom = 262.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_xeevv")
+theme_override_styles/panel = SubResource("StyleBoxFlat_fu4wh")
 
 [node name="GameOutcomeLabel" type="Label" parent="Panel/Control/Panel"]
 layout_mode = 1

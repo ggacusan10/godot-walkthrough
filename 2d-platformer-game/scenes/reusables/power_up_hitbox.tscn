@@ -11,6 +11,7 @@ script = ExtResource("1_768ry")
 
 [node name="PickedUpPowerUpSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_4vdha")
+bus = &"SFX"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)

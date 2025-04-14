@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c6rmv3rjpljji"]
 
-[ext_resource type="Script" uid="uid://dd5lemlnv4hso" path="res://assets/killzone.gd" id="1_xlapc"]
+[ext_resource type="Script" uid="uid://dd5lemlnv4hso" path="res://scripts/reusables/killzone.gd" id="1_xlapc"]
 [ext_resource type="AudioStream" uid="uid://bor10wpaw1axy" path="res://assets/sounds/hurt.wav" id="2_kl8fp"]
 
 [node name="Killzone" type="Area2D"]
@@ -13,6 +13,7 @@ one_shot = true
 
 [node name="KilledSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_kl8fp")
+volume_db = 3.353
 bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

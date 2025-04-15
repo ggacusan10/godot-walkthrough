@@ -3,6 +3,7 @@ extends Node
 signal lives_changed(lives)
 signal coins_changed(coins)
 signal fruits_changed(fruits)
+signal slimes_changed(slimes)
 signal game_over_signal
 
 # making it static so that the game_state persists
@@ -41,6 +42,7 @@ func add_fruit() -> void:
 func add_killed_slime(slime_id: String) -> void:
 	game_state.killed_slimes[slime_id] = true
 	game_state.slimes += 1
+	emit_signal("slimes_changed", game_state.slimes)
 
 func game_won() -> void:
 	game_state.is_game_over = true

@@ -43,7 +43,8 @@ func _ready():
 
 func _on_power_up_hitbox_hit() -> void:
 	print("[mystery_powerup.gd] Received signal that it was hit")
-	fruit.get_fruit()
+	if fruit:
+		fruit.get_fruit()
 
 func _on_grabbed_fruit() -> void:
 	print("[mystery_powerup.gd] Grabbed fruit")

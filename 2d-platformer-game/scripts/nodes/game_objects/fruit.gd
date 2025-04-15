@@ -3,7 +3,6 @@ extends Node2D
 @onready var apple: Sprite2D = $Apple
 @onready var orange: Sprite2D = $Orange
 @onready var area_2d: Area2D = $Area2D
-@onready var fruit: Node2D = $"."
 
 var fruits = []
 
@@ -33,5 +32,5 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		print("Grabbed fruit by: ", body)
 		grabbed_fruit.emit()
-		fruit.queue_free()
+		queue_free()
 		

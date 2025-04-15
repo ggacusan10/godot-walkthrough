@@ -42,6 +42,11 @@ func add_killed_slime(slime_id: String) -> void:
 	game_state.killed_slimes[slime_id] = true
 	game_state.slimes += 1
 
+func game_won() -> void:
+	game_state.is_game_over = true
+	game_state.did_win = true
+	emit_signal("game_over_signal")
+
 func reload() -> void:
 	game_state = GameState.new()
 	get_tree().reload_current_scene()

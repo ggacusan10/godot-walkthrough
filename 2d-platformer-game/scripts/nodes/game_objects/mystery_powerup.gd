@@ -17,8 +17,17 @@ var ICE = "ICE"
 
 var mystery_power_ups = {}
 
+var mystery_powerup_id: String
+
 func _ready():
 	var powerUpHitbox = $PowerUpHitbox
+	mystery_powerup_id = self.name
+	
+	# Prevent the player from getting unlimited fruits
+	# if it has been collected before	
+	if GameManager.game_state.collected_fruits.has(self.name) and fruit:
+		fruit.queue_free()
+	
 	powerUpHitbox.power_up_hitbox_hit.connect(_on_power_up_hitbox_hit)
 	fruit.grabbed_fruit.connect(_on_grabbed_fruit)
 	
@@ -48,4 +57,4 @@ func _on_power_up_hitbox_hit() -> void:
 
 func _on_grabbed_fruit() -> void:
 	print("[mystery_powerup.gd] Grabbed fruit")
-	GameManager.add_fruit()
+	GameManager.add_fruit(self.name)

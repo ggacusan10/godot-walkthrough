@@ -33,9 +33,8 @@ func add_collected_coin(coin_id: String) -> void:
 	game_state.coins += 1
 	emit_signal("coins_changed", game_state.coins)
 
-func add_fruit() -> void:
-	# TODO: need to map the fruits to avoid respawning
-	#collected_fruits[fruit_id] = true
+func add_fruit(fruit_id: String) -> void:
+	game_state.collected_fruits[fruit_id] = true
 	game_state.fruits += 1
 	emit_signal("fruits_changed", game_state.fruits)
 

@@ -495,9 +495,10 @@ layer_1/tile_data = PackedInt32Array(65535, 0, 0, 0, 0, 0, 65533, 0, 0, 65534, 0
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 z_index = 5
-position = Vector2(348, -46)
+position = Vector2(2395, -103)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+visible = false
 position = Vector2(3, -1)
 zoom = Vector2(4, 4)
 limit_left = -70

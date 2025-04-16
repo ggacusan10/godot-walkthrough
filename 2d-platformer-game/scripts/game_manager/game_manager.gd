@@ -51,3 +51,6 @@ func game_won() -> void:
 func reload() -> void:
 	game_state = GameState.new()
 	get_tree().reload_current_scene()
+
+func update_checkpoint(new_position: Vector2) -> void:
+	game_state.last_checkpoint = new_position

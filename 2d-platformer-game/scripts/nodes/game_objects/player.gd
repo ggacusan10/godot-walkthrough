@@ -5,6 +5,9 @@ const JUMP_VELOCITY = -300.0
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
+func _ready() -> void:
+	position = GameManager.game_state.last_checkpoint
+
 func handle_animations(direction: float) -> void:
 	if is_on_floor():
 		if direction == 0:

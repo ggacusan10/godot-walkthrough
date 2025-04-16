@@ -18,3 +18,5 @@ var is_game_over: bool = false
 var did_win: bool = false
 
 var lives: int = MAX_LIVES
+
+var last_checkpoint: Vector2 = Vector2(-10.0, 0.0)

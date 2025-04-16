@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://b2208g3q7c85i"]
+[gd_scene load_steps=40 format=3 uid="uid://b2208g3q7c85i"]
 
 [ext_resource type="PackedScene" uid="uid://c4xbf8txokgvr" path="res://scenes/ui/game_over.tscn" id="1_kvuet"]
 [ext_resource type="PackedScene" uid="uid://cbcqas7tcsdad" path="res://scenes/game_objects/player.tscn" id="1_uwrxv"]
@@ -16,6 +16,7 @@
 [ext_resource type="FontFile" uid="uid://msqy0hwvsuth" path="res://assets/fonts/PixelOperator8.ttf" id="8_gee14"]
 [ext_resource type="PackedScene" uid="uid://c8227mwunaom0" path="res://scenes/game_objects/mystery_powerup.tscn" id="9_0tnpc"]
 [ext_resource type="Script" uid="uid://cxkykh72cbly5" path="res://scripts/nodes/game_objects/game_win.gd" id="15_ir15t"]
+[ext_resource type="PackedScene" uid="uid://co3sdhk0q077p" path="res://scenes/game_objects/checkpoint.tscn" id="17_rysoc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -495,7 +496,7 @@ layer_1/tile_data = PackedInt32Array(65535, 0, 0, 0, 0, 0, 65533, 0, 0, 65534, 0
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 z_index = 5
-position = Vector2(2395, -103)
+position = Vector2(-25, -3)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 visible = false
@@ -760,5 +761,13 @@ script = ExtResource("15_ir15t")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GameWin"]
 position = Vector2(2766, -186.5)
 shape = SubResource("RectangleShape2D_ca42v")
+
+[node name="Checkpoints" type="Node" parent="."]
+
+[node name="Checkpoint" parent="Checkpoints" instance=ExtResource("17_rysoc")]
+position = Vector2(855, -118)
+
+[node name="Checkpoint2" parent="Checkpoints" instance=ExtResource("17_rysoc")]
+position = Vector2(1495, 26)
 
 [connection signal="body_entered" from="GameWin" to="GameWin" method="_on_body_entered"]

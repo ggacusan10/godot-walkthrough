@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://co3sdhk0q077p"]
+
+[ext_resource type="Script" uid="uid://cnvq3lllxmd75" path="res://scripts/nodes/game_objects/checkpoint.gd" id="1_iq261"]
+[ext_resource type="Texture2D" uid="uid://bjhk3od35qho1" path="res://assets/sprites/world_tileset.png" id="2_4yeao"]
+[ext_resource type="FontFile" uid="uid://msqy0hwvsuth" path="res://assets/fonts/PixelOperator8.ttf" id="3_4yeao"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4yeao"]
+bg_color = Color(0.788218, 0.77966, 0, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 1.0
+expand_margin_top = 4.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4yeao"]
+size = Vector2(30, 49)
+
+[node name="Checkpoint" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_iq261")
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+anchors_preset = -1
+anchor_bottom = 0.148
+offset_left = -35.0
+offset_top = -32.0
+offset_right = 37.0
+offset_bottom = -20.0
+theme_override_fonts/font = ExtResource("3_4yeao")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_4yeao")
+text = "Checkpoint!"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_4yeao")
+region_enabled = true
+region_rect = Rect2(129, 50, 14, 15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -17.5)
+shape = SubResource("RectangleShape2D_4yeao")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

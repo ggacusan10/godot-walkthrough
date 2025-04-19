@@ -11,12 +11,6 @@ func _on_body_entered(body: Node2D) -> void:
 	body.get_node("CollisionShape2D").queue_free()
 	killed_sound.playing = true
 	GameManager.decrement_life()	
-	timer.start()
-
-
-func _on_timer_timeout() -> void:
-	Engine.time_scale = 1
+	await get_tree().create_timer(0.5).timeout
 	killed_sound.playing = false
-	
-	if not GameManager.game_state.is_game_over:
-		get_tree().reload_current_scene()
+	Engine.time_scale = 1

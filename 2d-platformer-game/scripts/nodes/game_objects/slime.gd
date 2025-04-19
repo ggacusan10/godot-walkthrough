@@ -3,7 +3,7 @@ extends Node2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var ray_cast_right: RayCast2D = $RayCastRight
 @onready var ray_cast_left: RayCast2D = $RayCastLeft
-@onready var killzone: Area2D = $Killzone
+@onready var killzone_collision_shape: CollisionShape2D = $Killzone/CollisionShape2D
 @onready var killed_slime_sound: AudioStreamPlayer2D = $KilledSlimeSound
 @onready var timer: Timer = $AttackZone/Timer
 
@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 
 func _on_attack_zone_body_entered(body: Node2D) -> void:
 	print("Killed slime!")
-	killzone.queue_free()
+	killzone_collision_shape.queue_free()
 	animated_sprite_2d.play("hurt")
 	killed_slime_sound.playing = true
 	GameManager.add_killed_slime(slime_id)

@@ -13,6 +13,9 @@ static var game_state := GameState.new()
 
 func _ready() -> void:
 	print("[GameManager] ready game_state: ", game_state)
+	# We may have set the Engine to half speed on death, but
+	# once we reload the game, we should set it back to normal
+	Engine.time_scale = 1
 	if game_state == null:
 		game_state = GameState.new()
 		print("[GameManager] creating new game_state: ", game_state)
@@ -27,6 +30,8 @@ func decrement_life() -> void:
 		emit_signal("game_over_signal")
 	else:
 		emit_signal("lives_changed", game_state.lives)
+		await get_tree().create_timer(0.5).timeout
+		get_tree().reload_current_scene()
 
 func add_collected_coin(coin_id: String) -> void:
 	game_state.collected_coins[coin_id] = true

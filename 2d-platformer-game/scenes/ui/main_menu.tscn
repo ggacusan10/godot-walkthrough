@@ -1,8 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://din5nv8a0h6k"]
+[gd_scene load_steps=35 format=3 uid="uid://din5nv8a0h6k"]
 
 [ext_resource type="Script" uid="uid://e13rt8qt2lmf" path="res://scripts/nodes/ui/main_menu.gd" id="1_1g8jr"]
 [ext_resource type="Texture2D" uid="uid://bog65lx6ouk12" path="res://assets/imgs/godot_background_main_menu.png" id="2_m1kxf"]
 [ext_resource type="FontFile" uid="uid://msqy0hwvsuth" path="res://assets/fonts/PixelOperator8.ttf" id="3_x2yvf"]
+[ext_resource type="Texture2D" uid="uid://cf3cfea36qrg2" path="res://assets/sprites/knight.png" id="4_m1kxf"]
+[ext_resource type="Texture2D" uid="uid://bw3hdibiv3il5" path="res://assets/sprites/slime_green.png" id="5_uhagc"]
+[ext_resource type="Texture2D" uid="uid://bjhk3od35qho1" path="res://assets/sprites/world_tileset.png" id="6_btxxm"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wu84c"]
 texture = ExtResource("2_m1kxf")
@@ -31,6 +34,187 @@ corner_radius_bottom_left = 16
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oa1go"]
 bg_color = Color(0.91638, 0.423566, 0.432539, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2yvf"]
+bg_color = Color(0.788235, 0.423529, 0.494118, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wb0q5"]
+bg_color = Color(0.789594, 0.759714, 0.188305, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_left = 25.0
+expand_margin_top = 25.0
+expand_margin_right = 25.0
+expand_margin_bottom = 25.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q85j6"]
+atlas = ExtResource("4_m1kxf")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8g5eo"]
+atlas = ExtResource("4_m1kxf")
+region = Rect2(32, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7suek"]
+atlas = ExtResource("4_m1kxf")
+region = Rect2(64, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otr3d"]
+atlas = ExtResource("4_m1kxf")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ekit"]
+atlas = ExtResource("4_m1kxf")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4uci"]
+atlas = ExtResource("4_m1kxf")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_877pj"]
+atlas = ExtResource("4_m1kxf")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ayp64"]
+atlas = ExtResource("4_m1kxf")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2j7i"]
+atlas = ExtResource("4_m1kxf")
+region = Rect2(160, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1h5l"]
+atlas = ExtResource("4_m1kxf")
+region = Rect2(192, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pw24t"]
+atlas = ExtResource("4_m1kxf")
+region = Rect2(224, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dct7"]
+atlas = ExtResource("4_m1kxf")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qilvv"]
+atlas = ExtResource("4_m1kxf")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbte4"]
+atlas = ExtResource("4_m1kxf")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0hcc"]
+atlas = ExtResource("4_m1kxf")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qch7b"]
+atlas = ExtResource("4_m1kxf")
+region = Rect2(128, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ovp2"]
+atlas = ExtResource("5_uhagc")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mexh"]
+atlas = ExtResource("5_uhagc")
+region = Rect2(24, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ud2m"]
+atlas = ExtResource("5_uhagc")
+region = Rect2(48, 48, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qqxfm"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"fruit_appear",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q85j6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8g5eo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7suek")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otr3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ekit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4uci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_877pj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ayp64")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y2j7i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1h5l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pw24t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5dct7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qilvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbte4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e0hcc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qch7b")
+}],
+"loop": true,
+"name": &"move",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ovp2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1mexh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ud2m")
+}],
+"loop": true,
+"name": &"slime_die",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m1kxf"]
+bg_color = Color(0.6, 0.231373, 1, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
@@ -75,7 +259,7 @@ theme_override_constants/separation = 5
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("3_x2yvf")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 24
 theme_override_styles/hover = SubResource("StyleBoxFlat_bqqt6")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_8ln24")
 theme_override_styles/normal = SubResource("StyleBoxFlat_8ln24")
@@ -85,7 +269,7 @@ text = "Start"
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("3_x2yvf")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 24
 theme_override_styles/hover = SubResource("StyleBoxFlat_bqqt6")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_8ln24")
 theme_override_styles/normal = SubResource("StyleBoxFlat_rtw2f")
@@ -96,7 +280,7 @@ text = "How to Play
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("3_x2yvf")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 24
 theme_override_styles/hover = SubResource("StyleBoxFlat_bqqt6")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_8ln24")
 theme_override_styles/normal = SubResource("StyleBoxFlat_oa1go")
@@ -118,6 +302,183 @@ theme_override_fonts/font = ExtResource("3_x2yvf")
 theme_override_font_sizes/font_size = 48
 text = "Nomadic Soldier"
 
+[node name="HowToPlayPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -578.0
+offset_top = -507.0
+offset_right = 578.0
+offset_bottom = 577.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_x2yvf")
+
+[node name="GoalLabel" type="Label" parent="HowToPlayPanel"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.144
+anchor_right = 0.5
+anchor_bottom = 0.144
+offset_left = -440.0
+offset_right = 440.0
+offset_bottom = 51.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_x2yvf")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_wb0q5")
+text = "Goal: Collect as many coins and fruit; and kill as many slimes until the end!"
+autowrap_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HowToPlayPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.567
+anchor_right = 0.5
+anchor_bottom = 0.567
+offset_left = -350.0
+offset_top = -286.5
+offset_right = 350.0
+offset_bottom = 286.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 150
+
+[node name="MoveContainer" type="HBoxContainer" parent="HowToPlayPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="MoveSprite" type="AnimatedSprite2D" parent="HowToPlayPanel/VBoxContainer/MoveContainer"]
+position = Vector2(742.548, -5.98199)
+scale = Vector2(5.59375, 5.4375)
+sprite_frames = SubResource("SpriteFrames_qqxfm")
+animation = &"move"
+autoplay = "move"
+frame_progress = 0.495495
+
+[node name="Label" type="Label" parent="HowToPlayPanel/VBoxContainer/MoveContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_x2yvf")
+theme_override_font_sizes/font_size = 24
+text = "ARROW_LEFT or ARROW_RIGHT to move"
+autowrap_mode = 1
+
+[node name="JumpContainer" type="HBoxContainer" parent="HowToPlayPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="JumpSprite" type="AnimatedSprite2D" parent="HowToPlayPanel/VBoxContainer/JumpContainer"]
+position = Vector2(579.548, -24.9041)
+scale = Vector2(5.59375, 5.4375)
+sprite_frames = SubResource("SpriteFrames_qqxfm")
+animation = &"jump"
+autoplay = "jump"
+frame_progress = 0.140047
+
+[node name="Label" type="Label" parent="HowToPlayPanel/VBoxContainer/JumpContainer"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_x2yvf")
+theme_override_font_sizes/font_size = 24
+text = "ARROW_UP or SPACE to jump"
+autowrap_mode = 1
+
+[node name="CollectFruitContainer" type="HBoxContainer" parent="HowToPlayPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="JumpSprite" type="AnimatedSprite2D" parent="HowToPlayPanel/VBoxContainer/CollectFruitContainer"]
+position = Vector2(637.548, 64.018)
+scale = Vector2(5.59375, 5.4375)
+sprite_frames = SubResource("SpriteFrames_qqxfm")
+animation = &"jump"
+autoplay = "jump"
+frame_progress = 0.39516
+
+[node name="Sprite2D" type="Sprite2D" parent="HowToPlayPanel/VBoxContainer/CollectFruitContainer"]
+position = Vector2(633.548, -36.982)
+scale = Vector2(5.70081, 5.07635)
+texture = ExtResource("6_btxxm")
+region_enabled = true
+region_rect = Rect2(0, 32, 16, 17)
+
+[node name="Label" type="Label" parent="HowToPlayPanel/VBoxContainer/CollectFruitContainer"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_x2yvf")
+theme_override_font_sizes/font_size = 24
+text = "Jump from the bottom to   collect a mystery fruit"
+autowrap_mode = 1
+
+[node name="KillSlimeContainer" type="HBoxContainer" parent="HowToPlayPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="JumpSprite2" type="AnimatedSprite2D" parent="HowToPlayPanel/VBoxContainer/KillSlimeContainer"]
+position = Vector2(462.548, -36.4041)
+scale = Vector2(5.59375, 5.4375)
+sprite_frames = SubResource("SpriteFrames_qqxfm")
+animation = &"jump"
+autoplay = "jump"
+frame_progress = 0.552755
+
+[node name="SlimeDie" type="AnimatedSprite2D" parent="HowToPlayPanel/VBoxContainer/KillSlimeContainer"]
+position = Vector2(463.548, 56.5959)
+scale = Vector2(5.59375, 5.4375)
+sprite_frames = SubResource("SpriteFrames_qqxfm")
+animation = &"slime_die"
+autoplay = "slime_die"
+frame_progress = 0.643798
+
+[node name="Label" type="Label" parent="HowToPlayPanel/VBoxContainer/KillSlimeContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_x2yvf")
+theme_override_font_sizes/font_size = 24
+text = "Jump on slime to kill"
+autowrap_mode = 1
+
+[node name="HowToPlayLabel" type="Label" parent="HowToPlayPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.044
+anchor_right = 0.5
+anchor_bottom = 0.044
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_x2yvf")
+theme_override_font_sizes/font_size = 24
+text = "How to Play"
+
+[node name="BackButton" type="Button" parent="HowToPlayPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.043
+anchor_top = 0.946
+anchor_right = 0.043
+anchor_bottom = 0.946
+offset_left = -0.119999
+offset_top = -18.63
+offset_right = 144.88
+offset_bottom = 31.37
+theme_override_fonts/font = ExtResource("3_x2yvf")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/hover = SubResource("StyleBoxFlat_m1kxf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_m1kxf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_m1kxf")
+text = "Back"
+
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/HowToPlayButton" to="." method="_on_how_to_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="HowToPlayPanel/BackButton" to="." method="_on_back_button_pressed"]

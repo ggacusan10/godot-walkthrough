@@ -303,7 +303,6 @@ theme_override_font_sizes/font_size = 48
 text = "Nomadic Soldier"
 
 [node name="HowToPlayPanel" type="Panel" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -368,7 +367,8 @@ custom_minimum_size = Vector2(700, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_x2yvf")
 theme_override_font_sizes/font_size = 24
-text = "ARROW_LEFT or ARROW_RIGHT to move"
+text = "LEFT_ARROW, RIGHT_ARROW, A, or D
+to move"
 autowrap_mode = 1
 
 [node name="JumpContainer" type="HBoxContainer" parent="HowToPlayPanel/VBoxContainer"]
@@ -388,7 +388,8 @@ custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_x2yvf")
 theme_override_font_sizes/font_size = 24
-text = "ARROW_UP or SPACE to jump"
+text = "UP_ARROW, SPACE, or W
+to jump"
 autowrap_mode = 1
 
 [node name="CollectFruitContainer" type="HBoxContainer" parent="HowToPlayPanel/VBoxContainer"]

@@ -5,7 +5,7 @@ extends Control
 @onready var coins_label: Label = $Panel/Control/Panel/VBoxContainer/CoinsLabel
 @onready var fruits_label: Label = $Panel/Control/Panel/VBoxContainer/FruitsLabel
 @onready var slimes_label: Label = $Panel/Control/Panel/VBoxContainer/SlimesLabel
-@onready var button: Button = $Panel/Control/Panel/Button
+@onready var button: Button = $Panel/Control/Panel/ButtonsContainer/StartOverButton
 
 class Style:
 	var old: StyleBox = null
@@ -54,4 +54,9 @@ func _on_game_over() -> void:
 	slimes_label.text = "Slimes killed: " + str(GameManager.game_state.slimes)
 
 func _on_button_pressed() -> void:
+	GameManager.reload()
+
+
+func _on_main_menu_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/ui/main_menu.tscn")
 	GameManager.reload()

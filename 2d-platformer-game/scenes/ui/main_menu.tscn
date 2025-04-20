@@ -303,6 +303,7 @@ theme_override_font_sizes/font_size = 48
 text = "Nomadic Soldier"
 
 [node name="HowToPlayPanel" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -360,7 +361,7 @@ scale = Vector2(5.59375, 5.4375)
 sprite_frames = SubResource("SpriteFrames_qqxfm")
 animation = &"move"
 autoplay = "move"
-frame_progress = 0.495495
+frame_progress = 0.968197
 
 [node name="Label" type="Label" parent="HowToPlayPanel/VBoxContainer/MoveContainer"]
 custom_minimum_size = Vector2(700, 0)
@@ -380,7 +381,7 @@ scale = Vector2(5.59375, 5.4375)
 sprite_frames = SubResource("SpriteFrames_qqxfm")
 animation = &"jump"
 autoplay = "jump"
-frame_progress = 0.140047
+frame_progress = 0.376373
 
 [node name="Label" type="Label" parent="HowToPlayPanel/VBoxContainer/JumpContainer"]
 custom_minimum_size = Vector2(500, 0)
@@ -400,7 +401,7 @@ scale = Vector2(5.59375, 5.4375)
 sprite_frames = SubResource("SpriteFrames_qqxfm")
 animation = &"jump"
 autoplay = "jump"
-frame_progress = 0.39516
+frame_progress = 0.631491
 
 [node name="Sprite2D" type="Sprite2D" parent="HowToPlayPanel/VBoxContainer/CollectFruitContainer"]
 position = Vector2(633.548, -36.982)
@@ -427,7 +428,7 @@ scale = Vector2(5.59375, 5.4375)
 sprite_frames = SubResource("SpriteFrames_qqxfm")
 animation = &"jump"
 autoplay = "jump"
-frame_progress = 0.552755
+frame_progress = 0.789075
 
 [node name="SlimeDie" type="AnimatedSprite2D" parent="HowToPlayPanel/VBoxContainer/KillSlimeContainer"]
 position = Vector2(463.548, 56.5959)
@@ -435,7 +436,7 @@ scale = Vector2(5.59375, 5.4375)
 sprite_frames = SubResource("SpriteFrames_qqxfm")
 animation = &"slime_die"
 autoplay = "slime_die"
-frame_progress = 0.643798
+frame_progress = 0.880118
 
 [node name="Label" type="Label" parent="HowToPlayPanel/VBoxContainer/KillSlimeContainer"]
 custom_minimum_size = Vector2(400, 0)

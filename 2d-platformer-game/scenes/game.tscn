@@ -440,8 +440,8 @@ layer = 3
 
 [node name="Scoreboard" type="VBoxContainer" parent="GameManager/CanvasLayer"]
 anchors_preset = -1
-anchor_left = 0.041
-anchor_top = 0.077
+anchor_left = 0.056
+anchor_top = 0.097
 anchor_right = 0.075
 anchor_bottom = 0.119
 offset_left = -58.0
